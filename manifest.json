@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Copy Image and Page URL",
+  "version": "1.0",
+  "permissions": [
+    "clipboardWrite",
+    "activeTab"
+  ],
+  "icons": {
+    "48": "icons/icon.webp"
+  },
+  "description": "Easily copy images from any webpage along with the current page URL to your clipboard with a simple right-click.",
+  "homepage_url": "https://example.com",  // Optional: You can replace this with your extension's homepage
+  "applications": {
+    "gecko": {
+      "id": "your-extension@example.com"  // Optional: Change to your own extension ID
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"]
+    }
+  ]
+}
